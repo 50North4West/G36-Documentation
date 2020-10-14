@@ -12,6 +12,8 @@ The POH currently covers:
 Still to do:
 * 3a Abnormals
 * 4 Normals
+* 5 Abbridged Performance Section and how to lean, flying tips
+* FAQ
 
 Developement Plans / Ideas
 * Flight Planner Form to generate A4 PDF flight Plans for VFR flight
