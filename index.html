@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
+    <meta name="description" content="G36 Docs">
+    <meta name="author" content="Matt Barraud (CaptMatto)">
     <title>G36 Bonanza Improvement Project - Documentation</title>
     <!-- Bootstrap & Fontawesome core CSS & JS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -1390,6 +1389,12 @@
           <li>
             <a href="#emergencies_Alt1failure">Alternator 2 Failure [ALT 2 INOP]</a>
           </li>
+          <li>
+            <a href="#emergencies_Alt2andBusfailure">Alternator 2 & Bus Tie Failure [ALT 2 INOP]</a>
+          </li>
+          <li>
+            <a href="#emergencies_electricalLoadShed">Electrical Load Shedding</a>
+          </li>
         </ul>
       </div>
       <div class="container">
@@ -1758,7 +1763,7 @@
               </ol>
             </p>
             <hr />
-            <p class="mt-3 mb-0 item-header anchor-hack" id="Alt1failure">
+            <p class="mt-3 mb-0 item-header anchor-hack" id="emergencies_Alt1failure">
               <i class="fas fa-angle-right text-danger mr-2"></i> <b>Alternator 1 Failure [ALT 1 INOP]</b>
             </p>
             <dl class="row mt-3 mb-2">
@@ -1805,10 +1810,10 @@
               </ol>
             </p>
             <hr />
-            <p class="mt-3 mb-0 item-header anchor-hack" id="Alt2failure">
+            <p class="mt-3 mb-0 item-header anchor-hack" id="emergencies_Alt2failure">
               <i class="fas fa-angle-right text-danger mr-2"></i> <b>Alternator 2 Failure [ALT 2 INOP] & [BUSES TIED]</b>
             </p>
-            <p>
+            <p class="mt-3">
               <span class="badge badge-warning">CAUTION</span> During ground operations, a failure of alternator
               2 can only be detected at RPMs above 2000.
             </p>
@@ -1851,6 +1856,61 @@
                 </li>
               </ol>
             </p>
+            <hr />
+            <p class="mt-3 mb-0 item-header anchor-hack" id="emergencies_Alt2andBusfailure">
+              <i class="fas fa-angle-right text-danger mr-2"></i> <b>Alternator 2 Failure and Bus Tie Failure [ALT 2 INOP]</b>
+            </p>
+            <p class="mt-3">
+              Illumination of the [ALT 2 INOP] without the Illumination of the
+              [BUSES TIED] indicates that the Bus Tie Contactor has failed
+              to close. Thus, Bus 2 will be powered only by Battery 2.
+            </p>
+            <dl class="row mt-3 mb-2">
+              <dd class="col-sm-8">Alternator 2 Switch</dd>
+              <dd class="col-sm-4 text-right">Verfiy On</dd>
+              <dd class="col-sm-8">Alt Load 2</dd>
+              <dd class="col-sm-4 text-right">Check</dd>
+              <dd class="col-sm-9">Bus Volts 2</dd>
+              <dd class="col-sm-3 text-right">Check</dd>
+              <dd class="col-sm-8">If Alt Load 2 indicate a load and Bus Volts 2 is 27.5 to 29.0 volts, a false caution alert is indicated.</dd>
+              <dd class="col-sm-4 text-right"></dd>
+              <dd class="col-sm-12">Continue to use Alternator 2</dd>
+              <dd class="col-sm-12">If Alt Load 2 shows no load and Bus Volts 2 is zero, Alternator 2 is inoperative and the bus tie did not close.<br /><span class="font-weight-bold">Attempt to reset the alternators as follows:</span></dd>
+              <dd class="col-sm-8">Alternator 2</dd>
+              <dd class="col-sm-4 text-right">Off Momentarily, Then On</dd>
+              <dd class="col-sm-12">If [ALT 2 INOP] Extinguishes</dd>
+              <dd class="col-sm-12">Continue to use Alternator 2</dd>
+              <dd class="col-sm-12">If Alt Load 2 continues to show no load and the [ALT 2 INOP] remains illuminated:<br /><span class="font-weight-bold">Attempt to reset the alternators as follows:</span></dd>
+              <dd class="col-sm-8">Alternator 2 Switch</dd>
+              <dd class="col-sm-4 text-right">Off</dd>
+              <dd class="col-sm-8">Alt Laod 1</dd>
+              <dd class="col-sm-4 text-right">Monitor</dd>
+              <dd class="col-sm-8">Bus 2 will be powered only by Battery 2</dd>
+              <dd class="col-sm-4 text-right">Load Shed as Required*</dd>
+              <dd class="col-sm-8">Land</dd>
+              <dd class="col-sm-4 text-right">As soon as possible</dd>
+            </dl>
+            <hr />
+            <p class="mt-3 mb-0 item-header anchor-hack" id="emergencies_electricalLoadShed">
+              <i class="fas fa-angle-right text-danger mr-2"></i> <b>Electrical Load Shedding</b>
+            </p>
+            <p class="mt-3">
+              LOSS OF ALTERNATOR 1 OR ALTERNATOR 1 AND 2
+            </p>
+            <p>
+              The following items are powered only by Battery 1 and Alternator
+              1. These items are candidates for load shedding if Alternator
+              1 fails or if Alternator 1 and 2 fail. This can be accomplished
+              by turning switches off, pulling circuit breakers, or refraining
+              from using the system. Items to be shed are at the discretion of
+              the pilot and should be chosen based on the flight conditions;
+              however, for a dual alternator failure those items with an *
+              must be shed in order to conserve battery power.
+            </p>
+            <p>
+              ITEMS LOCATED ON BUS 1
+            </p>
+            
           </div>
         </div>
       </div>
